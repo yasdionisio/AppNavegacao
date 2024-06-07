@@ -5,85 +5,15 @@ import { View, Text, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-function HomeScreen(props) {
-    return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <Text>Home Screen</Text>
-            <Button
-                title='Ir para Sobre'
-                onPress={() => props.navigation.navigate('Sobre')}
-            />
-            <Button
-                title='Ir para Produtos'
-                onPress={() => props.navigation.navigate('Produtos')}
-            />
-            <Button
-                title='Ir para Contato'
-                onPress={() => props.navigation.navigate('Contato')}
-            />
-        </View>
-    );
-}
+import HomeScreen from "./views/HomeScreen"
+import SobreScreen from "./views/HomeScreen"
+import ProdutosScreen from "./views/HomeScreen"
+import ContatoScreen from "./views/HomeScreen"
 
-function SobreScreen(props) {
-    return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <Text>Sobre Screen</Text>
-            <Button
-                title='Ir para Home'
-                onPress={() => props.navigation.navigate('Home')}
-            />
-            <Button
-                title='Ir para Produtos'
-                onPress={() => props.navigation.navigate('Produtos')}
-            />
-            <Button
-                title='Ir para Contato'
-                onPress={() => props.navigation.navigate('Contato')}
-            />
-        </View>
-    );
-}
 
-function ProdutosScreen(props) {
-    return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <Text>Produtos Screen</Text>
-            <Button
-                title='Ir para Home'
-                onPress={() => props.navigation.navigate('Home')}
-            />
-            <Button
-                title='Ir para Sobre'
-                onPress={() => props.navigation.navigate('Sobre')}
-            />
-            <Button
-                title='Ir para Contato'
-                onPress={() => props.navigation.navigate('Contato')}
-            />
-        </View>
-    );
-}
 
-function ContatoScreen(props) {
-    return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <Text>Contato Screen</Text>
-            <Button
-                title='Ir para Home'
-                onPress={() => props.navigation.navigate('Home')}
-            />
-            <Button
-                title='Ir para Sobre'
-                onPress={() => props.navigation.navigate('Sobre')}
-            />
-            <Button
-                title='Ir para Produtos'
-                onPress={() => props.navigation.navigate('Produtos')}
-            />
-        </View>
-    );
-}
+
+
 
 
 const Stack = createNativeStackNavigator();
