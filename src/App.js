@@ -20,7 +20,7 @@ function App() {
                 options={{
                     tabBarIcon: ({ color, size}) => (
                         <MaterialCommunityIcons
-                        name="Home" color={color} size={size} />
+                        name="home" color={color} size={size} />
                     ),
                 }}
                 />
@@ -28,7 +28,7 @@ function App() {
                 options={{
                     tabBarIcon: ({ color, size}) => (
                         <MaterialCommunityIcons
-                        name="" color={color} size={size} />
+                        name="information" color={color} size={size} />
                     ),
                 }}
                 />
@@ -36,7 +36,7 @@ function App() {
                 options={{
                     tabBarIcon: ({ color, size}) => (
                         <MaterialCommunityIcons
-                        name="home" color={color} size={size} />
+                        name="menu" color={color} size={size} />
                     ),
                 }}
                 />
@@ -44,8 +44,8 @@ function App() {
                 options={{
                     tabBarIcon: ({ color, size}) => (
                         <MaterialCommunityIcons
-                        name="home" color={color} size={size} />
-                    ),
+                        name="account" color={color} size={size} />
+                    )
                 }}
                 />
 
