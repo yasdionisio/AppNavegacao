@@ -6,9 +6,9 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import HomeScreen from "./views/HomeScreen"
-import SobreScreen from "./views/HomeScreen"
-import ProdutosScreen from "./views/HomeScreen"
-import ContatoScreen from "./views/HomeScreen"
+import SobreScreen from "./views/SobreScreen"
+import ProdutosScreen from "./views/ProdutosScreen"
+import ContatoScreen from "./views/ContatoScreen"
 
 const Tab = createBottomTabNavigator();
 
