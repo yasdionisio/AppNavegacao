@@ -1,49 +1,223 @@
-import { View, Text, Button, FlatList, StyleSheet } from "react-native";
+import { StyleSheet, View, ScrollView } from "react-native";
+import { Card, Text, Button } from "react-native-paper";
 
-import produtos from "../data/dados"
-import { Divider, List } from "react-native-paper";
 
-export default function ProdutoScreen(props) {
-    function getProdutoItem({ item: prod }) {
-        return (
-            <View>
-                <List.Item style={estilos.ListItem}
-                    title={prod.nome}
-                    description={prod.preco}
-                    left={() => <List.Image variant="image"
-                        source={{ uri: prod.linkImagem }}
-                    />}
-                />
-                <Divider />
-            </View>
-
-        )
-
-    }
-
+export default function HomeScreen(props) {
 
     return (
-        <View style={estilos.container}>
+        <ScrollView>
+            <View style={{
+                flex: 1, alignItems: 'center', justifyContent: 'center', padding: 15
+            }}>
 
-            <FlatList
-                data={produtos}
-                keyExtractor={prod => prod.id}
-                renderItem={getProdutoItem}
-                style={estilos.flatList} />
+                <View>
+                    <Text style={estilos.titulo}>SerTerra Queijaria</Text>
+                </View>
 
-        </View>
+                <View>
+                    <Text style={{fontSize: 15, alignSelf: 'center', marginTop: 15}}>Queijos, vinhos, geleias e varios outros produtos 
+                        artesanais para alegrar o seu dia </Text>
+                </View>
 
+                <Card style={estilos.card}>
+                    <Card.Cover source={require("../assets/queijoPerimbo.webp")} />
+
+                    <Card.Content>
+                        <View style={{
+                            flexDirection: "column",
+                            justifyContent: "space-between",
+                            alignItems: "center",
+                            marginTop: 13
+                        }}>
+                            <View>
+                                <Text variant="titleLarge">QUEIJO PERIMBÓ - 300G</Text>
+                                <Text variant="titleLarge">R$89,90</Text>
+                            </View>
+
+                            <Card.Actions>
+                                <Button>Comprar</Button>
+                            </Card.Actions>
+
+                        </View>
+                    </Card.Content>
+
+                </Card>
+
+                <Card style={estilos.card}>
+                    <Card.Cover source={require("../assets/queijoLenda.webp")} />
+
+                    <Card.Content>
+                        <View style={{
+                            flexDirection: "column",
+                            justifyContent: "space-between",
+                            alignItems: "center",
+                            marginTop: 13
+                        }}>
+                            <View>
+                                <Text variant="titleLarge">QUEIJO A LENDA - 140G</Text>
+                                <Text variant="titleLarge">R$39,90</Text>
+                            </View>
+
+                            <Card.Actions>
+                                <Button>Comprar</Button>
+                            </Card.Actions>
+
+                        </View>
+                    </Card.Content>
+
+                </Card>
+
+                <Card style={estilos.card}>
+                    <Card.Cover source={require("../assets/geleiaMexericaClementina.webp")} />
+
+                    <Card.Content>
+                        <View style={{
+                            flexDirection: "column",
+                            justifyContent: "space-between",
+                            alignItems: "center",
+                            marginTop: 13
+                        }}>
+                            <View>
+                                <Text variant="titleLarge">GELEIA DE MEXERICA CLEMENTINA</Text>
+                                <Text variant="titleLarge">R$39,90</Text>
+                            </View>
+
+                            <Card.Actions>
+                                <Button>Comprar</Button>
+                            </Card.Actions>
+
+                        </View>
+                    </Card.Content>
+                    
+                </Card>
+
+                <Card style={estilos.card}>
+                    <Card.Cover source={require("../assets/geleiaPimentaDefumada.webp")} />
+
+                    <Card.Content>
+                        <View style={{
+                            flexDirection: "column",
+                            justifyContent: "space-between",
+                            alignItems: "center",
+                            marginTop: 13
+                        }}>
+                            <View>
+                                <Text variant="titleLarge">GELEIA DE PIMENTA DEFUMADA</Text>
+                                <Text variant="titleLarge">R$39,90</Text>
+                            </View>
+
+                            <Card.Actions>
+                                <Button>Comprar</Button>
+                            </Card.Actions>
+
+                        </View>
+                    </Card.Content>
+                    
+                </Card>
+
+                <Card style={estilos.card}>
+                    <Card.Cover source={require("../assets/doceJabuticaba.webp")} />
+
+                    <Card.Content>
+                        <View style={{
+                            flexDirection: "column",
+                            justifyContent: "space-between",
+                            alignItems: "center",
+                            marginTop: 13
+                        }}>
+                            <View>
+                                <Text variant="titleLarge">DOCE DE JABUTICABA DE CORTE</Text>
+                                <Text variant="titleLarge">R$42,90</Text>
+                            </View>
+
+                            <Card.Actions>
+                                <Button>Comprar</Button>
+                            </Card.Actions>
+
+                        </View>
+                    </Card.Content>
+                    
+                </Card>
+
+                <Card style={estilos.card}>
+                    <Card.Cover source={require("../assets/torroneAmendoa.webp")} />
+                    <Card.Content>
+                        <View style={{
+                            flexDirection: "column",
+                            justifyContent: "space-between",
+                            alignItems: "center",
+                            marginTop: 13
+                        }}>
+                            <View>
+                                <Text variant="titleLarge">TORRONE AMÊNDOA - 90G</Text>
+                                <Text variant="titleLarge">R$27,00</Text>
+                            </View>
+
+                            <Card.Actions>
+                                <Button>Comprar</Button>
+                            </Card.Actions>
+
+                        </View>
+                    </Card.Content>
+                </Card>
+
+                <Card style={estilos.card}>
+                    <Card.Cover source={require("../assets/vinhoDonGioanni.webp")} />
+                    <Card.Content>
+                        <View style={{
+                            flexDirection: "column",
+                            justifyContent: "space-between",
+                            alignItems: "center",
+                            marginTop: 13
+                        }}>
+                            <View>
+                                <Text variant="titleLarge">DON GIOVANNI NATURE</Text>
+                                <Text variant="titleLarge">R$138,00</Text>
+                            </View>
+
+                            <Card.Actions>
+                                <Button>Comprar</Button>
+                            </Card.Actions>
+
+                        </View>
+                    </Card.Content>
+                </Card>
+
+                <Card style={estilos.card}>
+                    <Card.Cover source={require("../assets/excelenciaClassica.webp")} />
+                    <Card.Content>
+                        <View style={{
+                            flexDirection: "column",
+                            justifyContent: "space-between",
+                            alignItems: "center",
+                            marginTop: 13
+                        }}>
+                            <View>
+                                <Text variant="titleLarge">EXCELÊNCIA CLÁSSICA</Text>
+                                <Text variant="titleLarge">R$44,00</Text>
+                            </View>
+
+                            <Card.Actions>
+                                <Button>Comprar</Button>
+                            </Card.Actions>
+
+                        </View>
+                    </Card.Content>
+                </Card>
+
+            </View>
+        </ScrollView>
     );
 }
 
 const estilos = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center"
+    card: {
+        justifyContent: 'space-between',
+        width: "100%",
+        margin: 10
     },
-    flatList: {
-        width: "95%"
+    titulo: {
+        fontSize: 40,
+        marginBottom: 15,
     }
-    
 })
